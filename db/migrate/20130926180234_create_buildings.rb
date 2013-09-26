@@ -5,6 +5,7 @@ class CreateBuildings < ActiveRecord::Migration
       t.string :city, null: false
       t.string :state, null: false
       t.integer :postal_code, null: false
+      t.string :description, null: false
 
       t.timestamps
     end

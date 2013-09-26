@@ -6,5 +6,6 @@ FactoryGirl.define do
     city "Boston"
     state "MA"
     postal_code 02135
+    description "look at this awesome place"
   end
 end

@@ -14,7 +14,7 @@ feature 'Add a building', %Q{
   # If I do not specify all of the required information in the required formats, the building is not recorded and I am presented with errors
   # Upon successfully creating a building, I am redirected so that I can record another building.
 
-  let(:building) { FactoryGirl.build(:building) }
+  let(:building) { FactoryGirl.build(:building) } 
 
   scenario 'visit the homepage and add a buidling' do 
     visit '/'
@@ -23,7 +23,8 @@ feature 'Add a building', %Q{
     fill_in 'City', with: building.city
     fill_in 'State', with: building.state
     fill_in 'Postal code', with: building.postal_code
+    fill_in 'Description', with: building.description
     click_button 'Create'
     expect(page).to have_content('You have created a new building.')
-  end
-end 
+  end 
+end
