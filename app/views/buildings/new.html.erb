@@ -1,0 +1,26 @@
+<%- if !@building.valid? -%>
+  <ul class="errors">
+    <%- @repository.errors.full_messages.each do |error| -%>
+      <li><%= error %>
+    <%- end -%>
+  </ul>
+<%- end -%>  
+
+<%= form_for @building do |f| %>
+
+<h2>Create Building</h2>
+
+  <div><%= f.label :street_address %><br />
+  <%= f.text_field :street_address %></div>
+
+  <div><%= f.label :city %><br />
+  <%= f.text_field :city %></div>
+
+  <div><%= f.label :state %><br />
+  <%= f.text_field :state %></div>
+
+   <div><%= f.label :postal_code %><br />
+  <%= f.text_field :postal_code %></div>
+
+  <div><%= f.submit "Create" %></div>
+<%- end -%>
